@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #007bff 0%, #782ef0 100%);
+        color: white;
+        padding: 80px 20px;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 40px;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .hero-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    .btn-start {
+        padding: 12px 25px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+</style>
+
+<div class="container">
+    <div class="hero-section">
+        <h1 class="hero-title">Vidyayug Employees Portal</h1>
+        <p class="hero-subtitle">Manage Employees • Departments • Records • Performance</p>
+
+        <a href="{% url 'employee_list' %}" class="btn btn-light btn-start">
+            Enter Portal
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
